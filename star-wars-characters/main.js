@@ -19,7 +19,7 @@ for (let step = 0; step < 7; step++) {
 //define main section for use
 const mainContent = document.querySelector('#main')
 
-//create header
+//create header at top of main
 const mainHeader = document.createElement('header');
 mainHeader.className = 'mainHeader';
 document.body.insertBefore(mainHeader, mainContent);

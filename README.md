@@ -1,1 +1,3 @@
-# 1600-portfolio-Fall2020-2
+# Henry's Portfolio Project
+
+## This is the project for my DGM 1600 course

@@ -19,6 +19,9 @@ for (let step = 0; step < 7; step++) {
 //define main section for use
 const mainContent = document.querySelector('#main')
 
+//show all characters at the beginning
+populateDOM(people);
+
 //create header at top of main
 const mainHeader = document.createElement('header');
 mainHeader.className = 'mainHeader';
@@ -43,7 +46,13 @@ mainHeader.appendChild(otherButton);
 //sort characters into new array by gender
 const maleCharacters = people.filter(person => person.gender === 'male');
 const femaleCharacters = people.filter(person => person.gender === 'female');
-const otherCharacters = people.filter(person => person.gender === 'n/a');
+const otherCharacters = people.filter((thing) => {
+    if (thing.gender === 'n/a' ||
+        thing.gender === 'none' ||
+        thing.gender === 'hermaphrodite') {
+        return thing;
+    }
+});
 
 //give buttons events for respective gender
 maleButton.addEventListener('click', () => populateDOM(maleCharacters));

@@ -67,6 +67,13 @@ a {
     font-size: x-large;
   }
 
+#welcome-section h1 {
+    color: aliceblue;
+}
+
+#welcome-section h3 {
+    color: aliceblue;
+}
 
 .projects-section {
     text-align: center;

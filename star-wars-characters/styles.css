@@ -12,10 +12,21 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    background-color: black;
+}
+
 .mainHeader {
     display: flex;
     justify-content: space-around;
     margin-top: 1rem;
+}
+
+button {
+    border: solid .5px yellow;
+    border-radius: 4px;
+    color: yellow;
+    background-color: black;
 }
 
 #main {
@@ -26,9 +37,12 @@ html {
 figure img {
     max-height: 12rem;
     margin: .5rem 1rem;
+    border: solid 1px yellow;
+    border-radius: 6px;
 }
 
 figcaption {
     text-align: center;
-    background-color: brown;
+    color: white;
+    background-color: ;
 }

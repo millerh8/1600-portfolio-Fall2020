@@ -1,5 +1,4 @@
-import { films } from '../data/films.js'
-
+import { films } from '../data/films.js';
 
 //console.log(people[0]);
 //console.log(films[0]);
@@ -19,12 +18,23 @@ for (let step = 0; step < 7; step++) {
     let figImg = document.createElement('img'); //new image instance
     figImg.src = `https://starwars-visualguide.com/assets/img/films/${step +1}.jpg`; // set the source
     let figCaption = document.createElement('figcaption')
-    figCaption.textContent = films[step].title;
+    
+    const foundFilm = films.find(film => getLastNumber(film.url) === (step + 1).toString());
+    figCaption.textContent = foundFilm.title;
 
     figure.appendChild(figImg);// append image to DOM
     figure.appendChild(figCaption);
 
     main.appendChild(figure);
+}
+
+function getLastNumber(url) {
+    let end = url.lastIndexOf('/');
+    let start = end -2;
+    if (url.charAt(start) === '/') {
+        start++;
+    }
+    return url.slice(start, end);
 }
 
 /* for (const film of films){

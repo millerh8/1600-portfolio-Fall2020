@@ -13,13 +13,20 @@ html {
 }
 
 body {
-    background-color: black;
+    background-color:black;
+    background-image:
+    radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+    radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+    radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+    radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px; 
+    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
 }
 
 .mainHeader {
     display: flex;
     justify-content: space-around;
-    margin-top: 1rem;
+    margin: 2rem;
 }
 
 button {
@@ -27,22 +34,25 @@ button {
     border-radius: 4px;
     color: yellow;
     background-color: black;
+    padding: 5px 10px;
 }
 
 #main {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 figure img {
-    max-height: 12rem;
-    margin: .5rem 1rem;
+    max-height: 18rem;
+    margin: .5rem 2rem;
     border: solid 1px yellow;
     border-radius: 6px;
 }
 
 figcaption {
     text-align: center;
-    color: white;
-    background-color: ;
+    color: yellow;
+    margin-bottom: 1rem;
+    font-size: 18px;
 }

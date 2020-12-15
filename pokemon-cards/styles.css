@@ -26,3 +26,32 @@ html {
     padding: 5px;
     perspective: 600px;
   }
+
+  .card {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+
+  .card-face-front {
+    background: red;
+  }
+  
+  .card-face-back {
+    background: blue;
+    transform: rotateY(180deg);
+  }
+
+  .card.is-flipped {
+    transform: rotateY(180deg);
+  }

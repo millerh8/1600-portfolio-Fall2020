@@ -56,18 +56,19 @@ nav a {
 }
 
 
-#welcome-section {
+.welcome-section {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     width: 100%;
+    margin: none;
     height: 100vh;
     /* background-color: #2f2fa2; */
     background-image: url(/images/background-profile-2.JPG);
     background-size: cover;
     font-size: x-large;
     padding: 1rem;;
-  }
+}
 
 /* #welcome-section h1 {
     color: #f64c72;

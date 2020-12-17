@@ -41,23 +41,48 @@ function populatePokeCard(pokemon) {
 function populateCardFront(pokemon) {
     let cardFront = document.createElement('div');
     cardFront.className = 'card-face card-face-front';
-    let frontLabel = document.createElement('p');
     let frontImage = document.createElement('img');
-    frontLabel.textContent = pokemon.name;
+    let frontLabel = document.createElement('h2');
     frontImage.src = `../images/pokemon/${getImageFileName(pokemon)}.png`;
-    cardFront.appendChild(frontLabel);
+    frontLabel.textContent = pokemon.name;
     cardFront.appendChild(frontImage);
+    cardFront.appendChild(frontLabel);
     return cardFront;
 }
 
 function populateCardBack(pokemon) {
     let cardBack = document.createElement('div');
     cardBack.className = 'card-face card-face-back';
-    let backLabel = document.createElement('p');
-    backLabel.textContent = `I'm the back of the card`;
+    let backLabel = document.createElement('h2');
+    backLabel.textContent = `Abilities:`;
+    let abilityList = document.createElement('ul');
+    pokemon.abilities.forEach(ability => {
+        let abilityName = document.createElement('li');
+        abilityName.textContent = ability.ability.name;
+        abilityList.appendChild(abilityName);
+    });
+    //let moveLabel = document.createElement('h2');
+    //moveLabel.textContent = `Most Accurate Move:`;
+    //let moveAccuracy = document.createElement('h4');
+    //const mostAccurateMove = getBestAccuracy(pokemon.moves);
+    //moveAccuracy.textContent = `${mostAccurateMove.move.name}`;
     cardBack.appendChild(backLabel);
+    cardBack.appendChild(abilityList);
+    //cardBack.appendChild(moveLabel);
+    //cardBack.appendChild(moveAccuracy);
     return cardBack;
 }
+
+/* function getBestAccuracyAndPower(pokemoves) {
+    return pokemoves.reduce((mostAccurate, move) => {
+
+        getAPIData(move.move.url).then
+        {async (data) => {
+
+        }}
+        return mostAccurate.accuracy > move.accuracy ? mostAccurate : move; 
+    }, {} )
+} */
 
 function getImageFileName(pokemon) {
     if (pokemon.id < 10) {
@@ -67,5 +92,5 @@ function getImageFileName(pokemon) {
     }
 }
 //https://pokeapi.co/api/v2/pokemon
-loadPage(`https://pokeapi.co/api/v2/pokemon?limit=30&offset=1`);
+loadPage(`https://pokeapi.co/api/v2/pokemon?limit=25&off`);
 //loadPage(`https://pokeapi.co/api/v2/pokemon?limit=10&offset=25`);

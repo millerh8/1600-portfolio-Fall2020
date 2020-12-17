@@ -19,7 +19,7 @@ body {
     background-size: cover;
 }
 
-.headerImg {
+.headerImg { /* I don't know why this isn't centering the header img*/
     display: flex;
     justify-content: center;
 }

@@ -19,7 +19,7 @@ body {
     background-size: cover;
 }
 
-img.headerImg {
+.headerImg {
     display: flex;
     justify-content: center;
 }
